@@ -1,0 +1,38 @@
+﻿1. Nền tảng .NET Framework là gì? 
+Là môi trường đa ngôn ngữ để xây dựng, triển khai và chạy các ứng dụng do hãng Microsoft phát
+triển.
+.NET Framework cho phép phát triển các ứng dụng chạy trên nhiều môi trường khác nhau như thiết bị
+di động, máy tính để bàn, điện thoại thông minh, dịch vụ web…
+
+2. Các công nghệ cốt lõi sử dụng trong .NET Framework là gì?
+Là ngôn ngữ lập trình sẽ được dịch sang ngôn ngữ Microsoft Intermediate Language(MSIL)
+Sau đó nhờ Common Language Runtime dịch sang mã máy
+
+3. Liệt kê ra các thành phần của .NET Framework
+o Các ngôn ngữ lập trình
+o Thư viện các lớp(Framework Class Library - FCL)
+o The Common Language Runtime(CLR)
+
+4 .NET Framework hỗ trợ ngôn ngữ lập trình C/C++?
+Có hỗ trợ ngôn ngữ lập trình C/C++.
+Ngoài ra còn hỗ trợ nhiều ngôn ngữ khác.
+
+5.Có thể dùng ngôn ngữ C# viết các chương trình chạy trên các thiết bị di động?
+Có thể dùng ngôn ngữ C# viết các chương trình chạy trên các thiết bị di động. 
+
+6. Mục đích của Common Language Runtime là gì? 
+Common Language Runtime giúp dịch sang ngôn ngữ Microsoft Intermediate Language(MSIL)sang mã máy.
+
+7. Common Language Runtime thực hiện các chức năng quản lý bộ nhớ, xử lý lỗi, dọn dẹp bộ nhớ
+
+8. Framework Class Library - FCL cung cấp một tập các lớp để làm việc với cơ sở dữ liệu
+
+9. asp.net webform cung cấp một tập các lớp để thiết kế các Form cho các trang web giống như Form
+
+11. Trong một ứng dụng có thể có bao nhiêu phương thức Main?
+Có 1 hàm main.
+
+12. Chương trình C# sẽ bắt đầu thực thi từ đâu ? 
+Từ hàm main.
+
+

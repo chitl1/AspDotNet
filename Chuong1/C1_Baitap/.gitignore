@@ -1,0 +1,42 @@
+# Thư mục build
+bin/
+obj/
+.vs/
+
+# Các tệp tạm thời và nhị phân
+*.dll
+*.exe
+*.pdb
+*.tmp
+*.swp
+
+# Thư mục cấu hình của IDE
+.vscode/
+.idea/
+
+# Các tệp cấu hình cá nhân của Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Các tệp NuGet cache và gói
+*.nupkg
+*.snupkg
+*.nuget.props
+*.nuget.targets
+
+# Tệp nhật ký
+*.log
+
+# Các tệp hệ thống
+.DS_Store
+Thumbs.db
+
+# Thư mục kiểm thử (nếu sử dụng)
+TestResults/
+
+# Các công cụ kiểm thử và IDE khác
+_ReSharper.*
+*.DotSettings
+.ncrunch*
