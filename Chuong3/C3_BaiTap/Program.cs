@@ -51,4 +51,6 @@ using System.Globalization;
 
 //C3_Bai4.CaculatePi
 
-C3_Bai5.CaculatePiByFor();
+//C3_Bai5.CaculatePiByFor();
+
+C3_Bai6.CaculateE();
