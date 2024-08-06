@@ -1,0 +1,70 @@
+﻿1) So sánh giữa lớp và giao diện?
+Lớp :
+Có thể khởi tạo đối tượng.
+Có các phương thức bên trong.
+1 lớp chỉ kế thừa được 1 lớp.
+
+giao diện: 
+Không thể khởi tạo đối tượng.
+Chỉ chứa phương thức trừu tượng.
+1 lớp có thể thực thi nhiều giao diện.
+
+2) Sự khác nhau giữa giao diện và lớp trừu tượng?
+ Lớp trừu tương có thể kế thừa một lớp và nhiều interface, còn interface chỉ kế thừa được
+nhiều interface.
+ Lớp trừu tượng có thể có phương thức thông thường(có thân) nhưng interface chỉ gồm các
+phương thức trừu tượng.
+ Phương thức của lớp trừu tượng được cài đặt bằng từ khóa override, phương thức của
+interface được đặt mà không dùng từ khóa override.
+ Sử dụng lớp trừu tượng khi bạn muốn trong lớp vừa có phương thức trừu tượng và có
+phương thức bình thường. Sử dụng interface khi chỉ khai báo các phương thức trừu tượng.
+ Lớp trừu tượng có thể khai báo phương thức khởi tạo, hàm hủy bên trong lớp, còn
+interface thì không
+
+3) Các lớp thực thi giao diện sẽ phải làm gì?
+ Lớp đó phải thực hiện tất cả các phương thức và thuộc tính được định nghĩa trong giao diện.
+
+4) Có bao nhiêu cách gọi một phương thức được khai báo trong giao diện?
+	c1: tạo 1 đối tượng của class thực thi giao diện.
+		từ đối tượng đó gọi đến phương thức được khai báo trong giao diện.
+	c2: tạo 1 đối tượng của giao diện thông qua lớp triển khai.
+		từ đối tượng đó gọi đến phương thức được khai báo trong giao diện.
+
+5) Các thành viên của giao diện có thể có những thuộc tính truy cập nào?
+Phạm vi truy cập của giao diện là public
+
+6) Chúng ta có thể tạo thể hiện của giao diện một cách trực tiếp được không?
+Không được
+
+7) Giao diện là kiểu dữ liệu tham chiếu hay kiểu giá trị?
+kiểu tham chiếu
+
+8) Khi thực thi giao diện với cấu trúc thì truy cập các thành viên của giao diện thông qua đối tượng
+hay thông qua tham chiếu giao diện là tốt nhất?
+Nên truy cập thông qua tham chiếu giao diện là tốt nhất.
+
+9) Số giao diện có thể được kế thừa cho một lớp? 
+1 lớp được kế thừa từ nhiều giao diện.
+
+10) Việc thực thi giao diện tường minh là thực thi như thế nào? Trong trường hợp nào thì cần thực
+hiện tường minh?
+    10a: Việc thực thi giao diện tường minh là thực thi như thế nào?
+    Ví dụ:
+    public interface IExample
+    {
+        void Method();
+    }
+
+    public class ExampleClass : IExample
+    {
+        //IExample.Method là thực thi giao diện tường minh
+        void IExample.Method()
+        {
+            // Implementation code
+        }
+    }
+    10b. Trong trường hợp nào thì cần thực hiện tường minh?
+    Khi một lớp kế thừa nhiều giao diện có các phương thức trùng tên.
+
+11) Hãy viết một giao diện khai báo một thuộc tính ID chứa chuỗi giá trị. Viết một lớp Employee
+thực thi giao diện đó. 
