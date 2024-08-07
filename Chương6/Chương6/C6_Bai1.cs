@@ -19,6 +19,10 @@ namespace Chương6
                 this.x = x;
                 this.y = y;
             }
+            public override string ToString()
+            {
+                return $"Point({x}, {y})";
+            }
         }
 
         public class DoanThang
@@ -42,7 +46,13 @@ namespace Chương6
             }
         }
 
-        public class HinhTron
+        public abstract class Shape
+        {
+            public abstract double Chuvi();
+            public abstract double Dientich();
+            public override abstract string ToString();
+        }
+        public class HinhTron: Shape
         {
             public Diem TamHinhTron { get; set; }
             public double BanKinh { get; set; }
@@ -53,12 +63,12 @@ namespace Chương6
                 BanKinh = banKinh;
             }
 
-            public double Dientich()
+            public override double Dientich()
             {
                 return Math.PI * BanKinh * BanKinh;
             }
 
-            public double Chuvi()
+            public override double Chuvi()
             {
                 return 2 * Math.PI * BanKinh;
             }
@@ -70,7 +80,7 @@ namespace Chương6
             }
         }
 
-        public class HinhChuNhat
+        public class HinhChuNhat : Shape
         {
             public Diem BottomLeft;
             public double Width;
@@ -81,12 +91,12 @@ namespace Chương6
                 Width = width;
                 Height = height;
             }
-            public double Dientich()
+            public override double Dientich()
             {
                 return Width * Height;
             }
 
-            public double Chuvi()
+            public override double Chuvi()
             {
                 return 2 * (Width + Height);
             }
