@@ -1,0 +1,87 @@
+﻿1) Việc sử dụng catch không có tham số có vẻ như có nhiều sức mạnh do chúng bắt giữ tất cả các ngoại lệ. 
+Tại sao chúng ta không luôn luôn sử dụng câu lệnh catch không có tham số để bắt các lỗi? 
+Vì xác định loại lỗi cụ thể bằng cách bắt các loại ngoại lệ cụ thể, có thể xử lý lỗi một cách chính xác hơn và bảo trì mã dễ dàng hơn.
+Tăng cường bảo mật.
+Cải thiện khả năng gỡ lỗi.
+
+
+2) Như câu trả lời bên trên tại sao tôi phải tìm hiểu nhiều về các ngoại lệ và cách thức xử lý các
+ngoại lệ khi chúng được phát sinh?
+Tìm hiểu để khi bắt được ngoại lệ thì biết nguyên nhân gây lỗi để sửa.
+
+
+3) Hãy cho biết các từ khóa được sử dụng để xử lý ngoại lệ?
+Xử lý ngoại lệ bằng khối lệnh
+try{
+//khối lệnh có khả năng có lỗi
+}
+catch{
+//Xử lý lỗi khi nó xảy ra
+}
+finaly{
+//thực hiện sau khi xong try hoặc catch
+}
+Xử lý ngoại lệ bằng lệnh throw
+
+4) Phân biệt giữa lỗi và ngoại lệ?
+Lỗi : thường đề cập đến các vấn đề nghiêm trọng hơn mà chương trình không thể xử lý được trong thời gian chạy hoặc biên dịch.
+Các lỗi này thường xảy ra do các vấn đề cơ bản về cấu trúc hoặc môi trường,
+và chúng không phải lúc nào cũng có thể được khắc phục trong mã nguồn của chương trình.
+Ngoại lệ: là các sự kiện không mong muốn xảy ra trong quá trình thực thi chương trình mà có thể được xử lý một cách có kiểm soát.
+Ngoại lệ cho phép bạn xử lý các tình huống bất thường mà không làm ngừng toàn bộ ứng dụng.
+
+5) Khi thực hiện việc bắt giữ các ngoại lệ nếu có nhiều mức bắt giữ ngoại lệ thì chúng ta sẽ thực
+hiện mức nào: từ chi tiết đến tổng quát, hay từ tổng quát đến chi tiết?
+Nên bắt ngoại lệ  từ chi tiết đến tổng quát
+Bắt lỗi từ chi tiết đến tổng quát: Đặt các khối catch cho các loại ngoại lệ cụ thể trước và các loại tổng quát sau để đảm bảo xử lý đúng cách.
+Xử lý lỗi cụ thể: Điều này giúp có thể cung cấp giải pháp và phản hồi chính xác cho các tình huống lỗi cụ thể hơn.
+
+6) Câu lệnh nào được dùng để phát sinh ngoại lệ?
+lệnh throw
+
+7) Loại nào sau đây nên được xử lý theo ngoại lệ và loại nào thì nên được xử lý bởi các mã lệnh
+thông thường?
+Loại nên được xử lý theo ngoại lệ 
+	b. Tập tin không được viết mà thực hiện viết.
+Loại nên được xử lý bởi các mã lệnh thông thường
+	a. Giá trị nhập vào của người dùng không nằm trong mức cho phép.
+	d. Đối số truyền vào cho phương thức chứa kiểu không hợp lệ.
+	c. Đối số truyền vào cho phương thức chứa giá trị không hợp lệ.
+
+8) Nguyên nhân nào dẫn đến phát sinh ngoại lệ?
+Lỗi Nhập Liệu: Khi người dùng nhập dữ liệu không hợp lệ hoặc không đúng định dạng. Ví dụ: nhập một chuỗi vào một trường yêu cầu số.
+Lỗi Tập Tin: Khi có vấn đề liên quan đến các tập tin, như không thể mở tập tin, tập tin không tồn tại, hoặc không có quyền truy cập. 
+Ví dụ: cố gắng đọc từ một tập tin không tồn tại.
+Lỗi Kết Nối Mạng: Khi có sự cố kết nối mạng, chẳng hạn như mất kết nối hoặc không thể kết nối đến máy chủ.
+Ví dụ: không thể tải dữ liệu từ một dịch vụ web.
+Lỗi Phép Toán: Khi thực hiện các phép toán không hợp lệ hoặc không thể thực hiện, như chia cho số không.
+Ví dụ: chia một số cho 0.
+Lỗi Truy Cập Bộ Nhớ: Khi cố gắng truy cập vùng bộ nhớ không hợp lệ hoặc không được phép. 
+Ví dụ: truy cập một chỉ mục không hợp lệ trong mảng.
+Lỗi Tài Nguyên: Khi không đủ tài nguyên hệ thống để thực hiện một yêu cầu,
+chẳng hạn như hết bộ nhớ hoặc hết không gian lưu trữ. 
+Ví dụ: không còn bộ nhớ heap để cấp phát cho một đối tượng mới.
+Lỗi Thực Thi: Các lỗi xảy ra trong quá trình thực thi mã, 
+chẳng hạn như khi một phương thức gọi phương thức của đối tượng mà đối tượng đó là null.
+Ví dụ: gọi phương thức trên một biến không được khởi tạo.
+Lỗi Tình Trạng Đồng Thời (Concurrency):
+Khi có vấn đề liên quan đến việc nhiều luồng thực thi đồng thời, như điều kiện đua (race condition) hoặc deadlock.
+Ví dụ: hai luồng cùng cố gắng cập nhật cùng một tài nguyên mà không có cơ chế đồng bộ hóa.
+Lỗi Quy Tắc Kinh Doanh: Khi có sự vi phạm quy tắc kinh doanh hoặc logic cụ thể của ứng dụng.
+Ví dụ: không thể thực hiện một giao dịch vì số dư tài khoản không đủ.
+
+9) Khi nào thì ngoại lệ xuất hiện?
+c. Trong khi thực thi chương trình
+
+10) Khi nào thì khối lệnh trong finally ñược thực hiện?
+Sau khi chạy xong lệnh trong khối try hoặc catch
+
+11)Trong namespace nào chứa các lớp liên quan ñến việc xử lý các ngoại lệ? Hãy cho biết một số
+lớp xử lý ngoại lệ quan trọng trong namespace này? 
+- namespace System
+- một số lớp xử lý ngoại lệ quan trọng trong namespace này:
+	systemException
+	ArgumentException
+	FormatException
+	OutOfMemoryException
+	IndexOutOfRangeException
