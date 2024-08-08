@@ -1,0 +1,61 @@
+﻿1) Tóm tắt những nét cơ bản về delegate?
+Delegate là cầu nối trung gian giữa sự kiện và phương thức xử lý sự kiện(method handling).
+Delegate sẽ chứa một danh sách các phương thức sẽ được gọi khi sự kiện xảy ra. 
+Một delegate có thể tham chiếu đến nhiều phương thức và các phương thức lần lượt được gọi để thực
+thi
+
+2) Có thể sử dụng delegate như một thuộc tính hay không? Nếu có thể thì sử dụng như thế nào?
+Cho biết ý nghĩa?
+Có thể sử dụng delegate như một thuộc tính hay không?
+	Có thể sử dụng delegate như một thuộc tính trong C#
+Cách sử dụng delegate như một thuộc tính: 
+Ý nghĩa:
+	Khi sử dụng delegate như một thuộc tính,
+	bạn có thể thiết lập và gọi các phương thức một cách linh hoạt 
+	mà không cần phải gán trực tiếp các phương thức vào các sự kiện.
+
+3) Nếu có một số hoạt động cần được thực hiện theo một thứ tự nhất định thì ta phải làm thế nào để
+khi cần thực hiện thì gọi lần lượt thực hiện các hoạt động đó?
+Có thể thực hiện bằng cách tạo 1 delegate tham chiếu tới nhiều phương thức bằng toán tử cộng.
+Sau đó thực thi delegate đó.
+
+4) Công dụng của việc khai báo delegate tĩnh? Khi nào thì nên khai báo ủy quyền tĩnh khi nào thì
+không nên?
+
+5) Một delegate có thể gọi được nhiều hơn một phương thức hay không? Chức năng nào trong C#
+hỗ trợ ủy quyền này?
+Chia Sẻ Giữa Các Đối Tượng:
+Delegate tĩnh thuộc về lớp (class) thay vì thuộc về các đối tượng cụ thể của lớp. 
+Điều này cho phép tất cả các đối tượng của lớp có thể truy cập và gán giá trị cho delegate này. 
+Delegate tĩnh là một phương tiện để chia sẻ thông tin hoặc hành vi giữa tất cả các đối tượng của lớp.
+Tiết Kiệm Tài Nguyên:
+Vì delegate tĩnh chỉ có một bản sao duy nhất trong bộ nhớ (trong suốt vòng đời của ứng dụng), 
+nên việc sử dụng delegate tĩnh có thể giúp tiết kiệm tài nguyên bộ nhớ, đặc biệt khi bạn không cần nhiều bản sao của delegate.
+Dùng Trong Tình Huống Cần Toàn Cục:
+Delegate tĩnh thường được sử dụng trong các tình huống mà bạn cần một hành động hoặc sự kiện 
+có thể được đăng ký và gọi từ bất kỳ đâu trong ứng dụng mà không cần phải phụ thuộc vào các đối tượng cụ thể.
+
+6) Có phải tất cả các delegate đều là delegate Multicast hay không? điều kiện để trở thành delegate
+Multicast?
+không phải.
+Điều kiện trở thành delegate Multicast là các delegate có kiểu trả về là void.
+
+7) Các toán tử nào có thể dùng để thực hiện việc Multicast các delegate?
+Toán tử dùng để thực hiện việc Multicast các delegate là toán tử trừ và toán tử cộng
+
+8) Sự kiện là gì? Trong hệ thống ứng dụng nào thì sự kiện được sử dụng nhiều?
+Sự kiện là sự tương tác giữa người dùng và chương trình thông qua giao diện.
+Trong hệ thống ứng dụng GUI và ứng dụng Web thì sự kiện được sử dụng nhiều
+
+9) Những sự kiện trong C# được thực hiện thông qua cái gì?
+Những sự kiện trong C# được thực hiện thông qua delegate
+
+10) Hãy tóm lược quá trình tạo một sự kiện và giải quyết sự kiện thông qua cơ chế ủy quyền trong
+C#?
+- Tạo ra 1 delegate và gắn vào 1 hoặc nhiều phương thức (khai báo delegate, gắn delegate với phương thức)
+- Tạo 1 lớp. Trong lớp này khi khai báo 1 sự kiện.
+- Tạo 1 đối tượng thuộc lớp đó và đăng ký phương thức xử lý sự kiện (thực hiện bằng cách sử dụng toán tử +=).
+- Sự kiện được đăng ký += delegate gắn vào phương thức trước đó.
+- Kích hoạt sự kiện -> Chạy phương thức được delegate gán vào
+- Hủy đăng ký sự kiện
+Trong phương thức được delegate gán vào thì gỡ bỏ việc đăng kí xử lý sự kiện.
