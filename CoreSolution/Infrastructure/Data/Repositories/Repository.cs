@@ -12,24 +12,42 @@ namespace Infrastructure.Data.Repositories
 {
     public class Repository<T> : IRepository<T> where T : BaseEntity
     {
-        public T Create(T entity)
+        private readonly ApplicationDbContext _dbContext;
+
+        public Repository(ApplicationDbContext dbContext)
         {
-            throw new NotImplementedException();
+            _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
+        }
+        public void Create(T entity)
+        {
+            _dbContext.Set<T>().Add(entity);
+            _dbContext.SaveChanges();
         }
 
-        public T Delete(T entity)
+        public void Delete(T entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Set<T>().Remove(entity);
+            _dbContext.SaveChanges();
         }
 
         public IEnumerable<T> GetAll()
-        {
-            throw new NotImplementedException();
+        {   
+            
+            return _dbContext.Set<T>().ToList();
         }
 
-        public T Update(T entity)
+        public void SaveChanges()
         {
-            throw new NotImplementedException();
+            _dbContext.SaveChanges();
+        }
+
+        public void Update(T entity)
+        {
+            _dbContext.Set<T>().Update(entity);
+        }
+        public T GetById(string id)
+        {
+            return _dbContext.Set<T>().Find(id);
         }
     }
 }

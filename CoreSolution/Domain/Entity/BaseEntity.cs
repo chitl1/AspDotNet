@@ -12,5 +12,6 @@ namespace Domain.Entity
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
         public int DeleteFlag { get; set; }
+
     }
 }

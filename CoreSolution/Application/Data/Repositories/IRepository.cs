@@ -9,9 +9,12 @@ namespace Application.Data.Repositories
 {
     public interface IRepository<T> where T : BaseEntity
     {
-        T Create(T entity);
-        T Update(T entity);
-        T Delete(T entity);
+        void Create(T entity);
+        void Update(T entity);
+        void Delete(T entity);
+        void SaveChanges();
         IEnumerable<T> GetAll();
+        T GetById(string id);
+
     }
 }
