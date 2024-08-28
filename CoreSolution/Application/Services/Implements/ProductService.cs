@@ -45,9 +45,12 @@ namespace Application.Services.Implements
             return _repository.GetAll();
         }
 
-        public IEnumerable<ProductViewModel> GetAllProduct()
+        public IEnumerable<ProductModel> GetAllProduct()
         {
-            return _productRepository.GetAllProducts(); // Sử dụng phương thức này
+            //return _productRepository.GetAllProducts();
+            //return _repository.GetAll();
+            var products = _repository.GetAll();
+            return _mapper.Map<IEnumerable<ProductModel>>(products);
         }
 
         public Product GetProducBytId(string Id)

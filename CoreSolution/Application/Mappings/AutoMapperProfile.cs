@@ -13,7 +13,7 @@ namespace Application.Mappings
     {
         public AutoMapperProfile()
         {
-            CreateMap<Product, ProductViewModel>()
+            CreateMap<Product, ProductModel>()
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
                 .ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.Price))
                 .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description));

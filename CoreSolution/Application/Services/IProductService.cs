@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Application.Services
 {
-    public interface IProductService: IServices<Product>
+    public interface IProductService
     {
         void Create(Product entity);
         void Update(Product entity);
         bool Delete(Product entity);
         IEnumerable<Product> GetAll();
-        IEnumerable<ProductViewModel> GetAllProduct();
+        IEnumerable<ProductModel> GetAllProduct();
         Product GetProducBytId(string Id);
     }
 }

@@ -11,6 +11,5 @@ namespace Application.Data.Repositories
     public interface IProductRepository 
     {
         Product GetProductById(string Id);
-        IEnumerable<ProductViewModel> GetAllProducts(); // Thêm phương thức này
     }
 }

@@ -16,7 +16,7 @@ namespace Infrastructure.Data.Repositories
 
         public Repository(ApplicationDbContext dbContext)
         {
-            _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
+            _dbContext = dbContext;
         }
         public void Create(T entity)
         {

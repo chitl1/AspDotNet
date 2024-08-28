@@ -18,17 +18,12 @@ namespace Infrastructure.Data.Repositories
 
         public ProductRepository(ApplicationDbContext dbContext, IMapper mapper)
         {
-            _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
-            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
+            _dbContext = dbContext;
+            _mapper = mapper;
         }
         public Product GetProductById(string Id)
         {
             return _dbContext.Set<Product>().Find(Id);
-        }
-        public IEnumerable<ProductViewModel> GetAllProducts()
-        {
-            var products = _dbContext.Set<Product>().ToList();
-            return _mapper.Map<IEnumerable<ProductViewModel>>(products);
         }
     }
 }
