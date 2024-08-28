@@ -15,13 +15,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+//var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-{
-    options.UseSqlServer(connectionString, b => b.MigrationsAssembly("WebMVC"));
+//builder.Services.AddDbContext<ApplicationDbContext>(options =>
+//{
+//    options.UseSqlServer(connectionString, b => b.MigrationsAssembly("WebMVC"));
 
-});
+//});
+ConfigureConectionDB.ConfigureDbContext(builder.Services, builder.Configuration);
 
 builder.Services.AddRepository();
 
