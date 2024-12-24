@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C4_BaiTap", "C4_BaiTap\C4_BaiTap.csproj", "{9E359D65-B48F-41A4-97F6-197079946D2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C4_BaiTap", "C4_BaiTap\C4_BaiTap.csproj", "{9E359D65-B48F-41A4-97F6-197079946D2B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C4_vidu", "C4_vidu\C4_vidu.csproj", "{282175B7-75B7-4595-BFF7-CB6C2E56D965}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C4_bubble_sort", "C4_bubble_sort\C4_bubble_sort.csproj", "{144BF6C6-B20F-4603-9E34-B47188B38FF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{9E359D65-B48F-41A4-97F6-197079946D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E359D65-B48F-41A4-97F6-197079946D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E359D65-B48F-41A4-97F6-197079946D2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{282175B7-75B7-4595-BFF7-CB6C2E56D965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{282175B7-75B7-4595-BFF7-CB6C2E56D965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{282175B7-75B7-4595-BFF7-CB6C2E56D965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{282175B7-75B7-4595-BFF7-CB6C2E56D965}.Release|Any CPU.Build.0 = Release|Any CPU
+		{144BF6C6-B20F-4603-9E34-B47188B38FF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{144BF6C6-B20F-4603-9E34-B47188B38FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{144BF6C6-B20F-4603-9E34-B47188B38FF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{144BF6C6-B20F-4603-9E34-B47188B38FF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
