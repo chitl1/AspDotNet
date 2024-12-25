@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Microsoft.VisualBasic.FileIO;
+using System.Xml.Schema;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 static class In
 {
@@ -26,6 +28,7 @@ class hoc
         for (int i = 0; i < n; i++)
         {
             Console.Write(" a[{0}] = ",i);
+            
             a[i] = Convert.ToInt16(Console.ReadLine());
         }
         //In mang
@@ -37,7 +40,8 @@ class hoc
         //Sap xep mang
         //bubbleSort.sapXep(a);
         //selectionSort.sapXep(a);
-        InsertionSort.sapXep(a);
+        //InsertionSort.sapXep(a);
+        QuickSort.SapXep(a, 0, a.Length -1 );
 
         //In mang
         In.InMAng(a);
@@ -177,3 +181,44 @@ public static class InsertionSort
     }
 }
 
+//4. Sắp xếp nhanh
+public static class QuickSort
+{
+    //phân hoạc lomuto
+   public static void SapXep(int[] a, int csd, int csc )
+    {
+        if (csd >= csc) return;
+        int p = Partition(a, csd, csc);
+        SapXep(a, csd, p - 1);
+        SapXep(a, p+1, csc);
+    }
+
+    public static int Partition(int[] a, int csd, int csc)
+    {
+        int pivot = a[csc];
+        int j = csd - 1;
+        int chisocuapivot = csc;
+        for (int i = csd; i <= csc ; i++)
+        {
+            if (a[i] <= pivot)
+            {
+                j++;
+                if (a[j] > a[i])
+                {
+                    int temp = a[i];
+                    a[i] = a[j];
+                    a[j] = temp;
+
+                }
+            }
+        }
+
+        return j ; // Trả về vị trí của pivot
+    }
+
+    public static int PartitionHoare()
+    {
+
+        return 0;
+    }
+}
